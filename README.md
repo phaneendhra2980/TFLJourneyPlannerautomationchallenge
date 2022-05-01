@@ -7,10 +7,15 @@ please refer to the [TFLJourney Planner automationchallenge repository](https://
 Main Important NuGet packages to this Project are:
 
 **Selenium.Support** - Main package for Selenium
+
 **Selenium.WebDriver** - Package uses for highly flexible, allowing many options for locating and manipulating elements within a browser
+
 **Selenium.WebDriver.ChromeDriver** - Package that contains the ChromeDriver so Selenium is able to control the Chrome browser
+
 **SpecFlow** - To Automate and devlop Behaviour Driven Development Scenarios
+
 **SpecFlow.Plus.LivingDocPlugin** - A plugin for SpecFlow to generate a shareable HTML Gherkin feature execution report (living documentation).
+
 **NUnit** - NUnit features a fluent assert syntax, parameterized, generic and theory tests and is user-extensible.
 
 
@@ -42,7 +47,9 @@ for e.g
 livingdoc test-assembly C:\Work\MyProject.Specs\bin\Debug\netcoreapp3.1\MyProject.Specs.dll -t C:\Work\MyProject.Specs\bin\debug\netcoreapp3.1\TestExecution.json
 
 Please refer below links for more Info
+
 (https://docs.specflow.org/projects/specflow-livingdoc/en/latest/Viewing/viewing-livingdoc-standalone.html)
+
 (https://docs.specflow.org/projects/specflow-livingdoc/en/latest/LivingDocGenerator/Using-the-command-line-tool.html)
 
 ### **Steps**
