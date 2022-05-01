@@ -140,9 +140,8 @@ namespace JourneyPlanner.Pages
             _webDriver.Navigate().GoToUrl(JourneyPlannerUrl);
             ScrollToElement(RecentsTabElement);
             RecentsTabElement.Click();
-            Assert.IsTrue(RecentJourneysElement.Displayed);
             Assert.AreEqual(RecentJourneysElement.Text.Trim(), "Hounslow Central Underground Station to Wembley Central");
-            _specFlowOutputHelper.WriteLine("Recent Journeys are displayed");
+            _specFlowOutputHelper.WriteLine("Recent Journeys are displayed: " + RecentJourneysElement.Text.Trim());
             TurnoffRecentsElement.Click();
         }
 
