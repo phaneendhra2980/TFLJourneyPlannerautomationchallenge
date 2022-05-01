@@ -21,5 +21,17 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+    - name: "Run SpecFlow Tests"
+      uses: cryptic-wizard/run-specflow-tests@v1.2.0
+      with: 
+        build-verbosity: "default = minimal"
+        configuration: Debug
+        framework: netcoreapp3.1
+        logger: trx
+        logger-file-name: JourneyPlanner.trx
+        no-build: true
+        output-html: LivingDoc.html
+        test-assembly-dll: JourneyPlanner/bin/Debug/netcoreapp3.1/JourneyPlanner.dll
+        test-assembly-path: JourneyPlanner/bin/Debug/netcoreapp3.1
+        test-execution-json: JourneyPlanner/bin/Debug/netcoreapp3.1/TestExecution.json
+        test-verbosity: "default = normal"
