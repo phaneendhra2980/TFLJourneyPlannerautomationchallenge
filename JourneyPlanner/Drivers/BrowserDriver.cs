@@ -3,6 +3,8 @@ using System.IO;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow.Infrastructure;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace JourneyPlanner.Specs.Drivers
 {
@@ -34,11 +36,13 @@ namespace JourneyPlanner.Specs.Drivers
         private IWebDriver CreateWebDriver()
         {
             //We use the Chrome browser
-           
-            ChromeDriverService service = ChromeDriverService.CreateDefaultService(Path.Combine(GetBasePath, @"Binaries\"));
+            new DriverManager().SetUpDriver(new ChromeConfig());
+            _driver = new ChromeDriver();
+            //ChromeDriverService service = ChromeDriverService.CreateDefaultService(Path.Combine(GetBasePath, @"Binaries\"));
+            //  ChromeDriverService service = ChromeDriverService.CreateDefaultService(GetBasePath);
             ChromeOptions options = new ChromeOptions();
             //options.AddArguments("--incognito");
-            _driver = new ChromeDriver(service, options);
+            
             _driver.Manage().Cookies.DeleteAllCookies();
             _driver.Manage().Window.Maximize();
             _specFlowOutputHelper.WriteLine("Browser launched");
