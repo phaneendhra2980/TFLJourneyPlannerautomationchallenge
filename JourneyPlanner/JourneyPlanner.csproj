@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PublishChromeDriver>true</PublishChromeDriver>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
